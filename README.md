@@ -1,4 +1,4 @@
-# Biosoft
+# Bact2Nuc
 Automates the prediction of subcellular localization and NLS using PSORTb, Deeplocpro 1.0 and NLStradamus.
 ## Requirements
 - **Dependencies:**
