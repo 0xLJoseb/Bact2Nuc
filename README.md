@@ -11,7 +11,7 @@ Automates the prediction of subcellular localization and NLS using PSORTb, Deepl
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/0xLJoseb/Biosoft
+   git clone https://github.com/0xLJoseb/Bact2Nuc
    cd Biosoft
 2. Run the dependencies script **dependencies.sh** 
    ```bash
