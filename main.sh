@@ -321,7 +321,7 @@ combine_predicts(){
 
 #  ======= combinar.py =======
 
-	python3 bin/combinar.py --psortb "$OUTPUT_DIR/Comb/output_arreglado.csv" --deeploc "$OUTPUT_DIR/Comb/records_arreglado.csv" --output "$OUTPUT_DIR/Comb/archivo_combinado.csv" --gram "$GRAM_GROUP"
+	venv_bact2nuc/bin/python bin/combinar.py --psortb "$OUTPUT_DIR/Comb/output_arreglado.csv" --deeploc "$OUTPUT_DIR/Comb/records_arreglado.csv" --output "$OUTPUT_DIR/Comb/archivo_combinado.csv" --gram "$GRAM_GROUP"
 	
 	if [[ $? -eq 0 ]]; then
 		echo -ne "\t${greenColour}[+]${endColour} The predictions have been successfully completed and combined!.\n"
@@ -337,7 +337,7 @@ combine_predicts(){
 
 	mkdir -p "$OUTPUT_DIR/NLSPredicts"
 	echo -ne "\n${purpleColour}[4/5]${endColour} Generando un archivo .fasta con las proteinas predichas con localizacion '$SITE' por PSORTb & Deeplocpro.\n"
-	python3 bin/extraer.py --score "$OUTPUT_DIR/Comb/archivo_combinado.csv" --fasta "$PROTEOMA_INPUT" --output "$OUTPUT_DIR/NLSPredicts/Predicted_proteins.fasta"
+	venv_bact2nuc/bin/python bin/extraer.py --score "$OUTPUT_DIR/Comb/archivo_combinado.csv" --fasta "$PROTEOMA_INPUT" --output "$OUTPUT_DIR/NLSPredicts/Predicted_proteins.fasta"
 	
 	if [[ $? -eq 0 ]]; then
 		echo -ne "\t${greenColour}[+]${endColour} The .fasta file has been successfully created!.\n"
