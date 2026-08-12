@@ -129,7 +129,7 @@ run_psortb() {
     locPSORTB_FLAG="Periplasmic" ;;
 		
     "Outer Membrane") 
-    if [[ "$PSORTB_FLAG" != "--negative" ]] then
+    if [[ "$PSORTB_FLAG" != "--negative" ]]; then
       echo -ne "${redColour}[X]${endColour} 'Outer Membrane' does not apply to Gram-positive bacteria!\n"
       exit 1
     fi 
