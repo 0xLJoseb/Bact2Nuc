@@ -2,8 +2,8 @@
 - Fixed dependency installation for DeepLocPro by pinning the PyTorch version to 2.5.1+cu124 and using a compatible setuptools version.
 - Fixed DeepLocPro environment configuration and dependency handling.
 - Fixed PSORTb execution in the main pipeline by preventing stdout redirection, which could cause the process to hang in certain environments.
-- Updated the main pipeline to ensure PSORTb and DeepLocPro execute correctly using their dedicated environments.
-
+- Updated the README.md file
+- Added MIT License
 
 ***************20/08/2025***************
 - Improved Ensembling:
