@@ -1,3 +1,10 @@
+***************26/09/2025***************
+- Fixed dependency installation for DeepLocPro by pinning the PyTorch version to 2.5.1+cu124 and using a compatible setuptools version.
+- Fixed DeepLocPro environment configuration and dependency handling.
+- Fixed PSORTb execution in the main pipeline by preventing stdout redirection, which could cause the process to hang in certain environments.
+- Updated the main pipeline to ensure PSORTb and DeepLocPro execute correctly using their dedicated environments.
+
+
 ***************20/08/2025***************
 - Improved Ensembling:
     In previous versions, the combination of results between PSORTb and DeepLocPro was performed through a simple average of the scores when both tools agreed on the sa    me localization for a protein. Now, instead of averaging, the final score is calculated using relative weights derived from the F1-Score of each tool against a trai    ning proteome.
@@ -23,7 +30,7 @@
 
 ***************09/08/2025***************
 - Modified 'bin/combinar.py' to add sys.exit(1) when both input files are empty, preventing the pipeline from continuing.
-- Updated 'main.sh' to stop execution if 'combinar.py' returns an error
+- Updated 'main.sh' to stop execution if 'combinar.py' returns an error.
 
 ***************08/08/2025***************
 - New site flag:
