@@ -136,6 +136,9 @@ echo "[+] Installing DeepLocPro dependencies..."
 # pkg_resources was removed from setuptools >= 82.
 "$DEEploc_ENV/bin/python" -m pip install "setuptools<82"
 
+"$DEEploc_ENV/bin/python" -m pip install "torch==2.5.1+cu124" --index-url https://download.pytorch.org/whl/cu124
+"$DEEploc_ENV/bin/python" -m pip install "fair-esm==2.0.0"
+
 if [ ! -d "$DEEploc_REPO" ]; then
     git clone https://github.com/Jaimomar99/deeplocpro
 else
@@ -144,7 +147,7 @@ fi
 
 echo "[+] Installing DeepLocPro..."
 
-"$DEEploc_ENV/bin/python" -m pip install "./$DEEploc_REPO"
+"$DEEploc_ENV/bin/python" -m pip install --no-build-isolation "./$DEEploc_REPO"
 
 echo "[+] DeepLocPro installed."
 echo
