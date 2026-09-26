@@ -151,7 +151,7 @@ run_psortb() {
         
 	
 	#Se ejecuta psortb
-	./psortb -i "$PROTEOMA_INPUT" -r "$OUTPUT_DIR/psortb_results" "$PSORTB_FLAG" > "$OUTPUT_DIR/logs/psortb.log" 2>&1 # Almacenamiento de errores en un .log
+	./psortb -i "$PROTEOMA_INPUT" -r "$OUTPUT_DIR/psortb_results" "$PSORTB_FLAG" 2> "$OUTPUT_DIR/logs/psortb.log" # Almacenamiento de errores en un .log
 
 	#Filtrando resultados de proteinas predichas por PSORTb con awk.
 	echo -e "${yellowColour}[!]${endColour} Filtrando resultados para el sitio de localizacion: \"$locPSORTB_FLAG"" de PSORTb"
