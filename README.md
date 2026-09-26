@@ -4,10 +4,11 @@ Automates the prediction of subcellular localization and NLS using PSORTb, Deepl
 - **Dependencies:**
   - Docker (for PSORTb).
 - **System requirements:**
-  - Recommended disk space: approximately 6 GB
+  - Recommended disk space: approximately 15 GB
   - At least 8 GB of RAM recommended
   - Internet connection: Needed to download dependencies and Docker images.
-
+- **Notes**:
+    We pin PyTorch to 2.5.1+cu124 because newer versions can cause pip to install a much larger CUDA environment. This can take up a lot of disk space and may cause the installation to fail on computers with limited storage.
 ## Installation
 1. Clone the repository:
    ```bash
