@@ -151,6 +151,7 @@ run_psortb() {
         
 	
 	#Se ejecuta psortb
+	#Do not redirect PSORTb stdout: redirecting it to a file causes PSORTb to hang.
 	./psortb -i "$PROTEOMA_INPUT" -r "$OUTPUT_DIR/psortb_results" "$PSORTB_FLAG" 2> "$OUTPUT_DIR/logs/psortb.log" # Almacenamiento de errores en un .log
 
 	#Filtrando resultados de proteinas predichas por PSORTb con awk.
