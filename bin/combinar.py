@@ -5,35 +5,35 @@ import re
 import argparse #Para automatizar la entrada
 import sys
 
-#Seccion de pesos (Derivados del F1_score) | Updated --> 20/09/2026
+#Seccion de pesos (Derivados del F1_score) | Updated --> 27/09/2026
 DPLGRAMNEG_weights = {
-    "Cytoplasmic" : 0.530876833845104,
-    "Cytoplasmic Membrane" : 0.506035889070147,
-    "Periplasmic" : 0.524603403518892,
-    "Outer Membrane" : 0.544897036989220,
-    "Extracellular" : 0.544909439327440
+    "Cytoplasmic" : 0.533916723861817,
+    "Cytoplasmic Membrane" : 0.508602034191733,
+    "Periplasmic" : 0.522500144416845,
+    "Outer Membrane" : 0.543241676862644,
+    "Extracellular" : 0.548303356202485
 }
 
 DPLGRAMPOS_weights = {
-    "Cell wall" : 0.491474997139261,
-    "Cytoplasmic" : 0.533730875798097,
-    "Cytoplasmic Membrane" : 0.531310122261528,
-    "Extracellular" : 0.557971963841216
+    "Cell wall" : 0.500333333333333,
+    "Cytoplasmic" : 0.533927388765127,
+    "Cytoplasmic Membrane" : 0.533366287691547,
+    "Extracellular" : 0.558174556406731
 }
 
 PSTBGRAMNEG_weights = {
-    "Cytoplasmic" : 0.469123166154896,
-    "Cytoplasmic Membrane" : 0.493964110929853,
-    "Periplasmic" : 0.475396596481108,
-    "Outer Membrane" : 0.455102963010780,
-    "Extracellular" : 0.455090560672560
+    "Cytoplasmic" : 0.466083276138183,
+    "Cytoplasmic Membrane" : 0.491397965808267,
+    "Periplasmic" : 0.477499855583155,
+    "Outer Membrane" : 0.456758323137356,
+    "Extracellular" : 0.451696643797515
 }
 
 PSTBGRAMPOS_weights = {
-    "Cell wall" : 0.508525002860739,
-    "Cytoplasmic" : 0.466269124201903,
-    "Cytoplasmic Membrane" : 0.468689877738472,
-    "Extracellular" : 0.442028036158784
+    "Cell wall" : 0.499666666666667,
+    "Cytoplasmic" : 0.466072611234873,
+    "Cytoplasmic Membrane" : 0.466633712308453,
+    "Extracellular" : 0.441825443593269
 }
 
 # Para que se vea ordenado de menor a mayor
