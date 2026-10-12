@@ -310,8 +310,9 @@ combine_predicts(){
   awk -F',' -v col="$score_column" 'NR>1 {print $2 "," $3 "," $col}' "$OUTPUT_DIR/deeploc_results/records.txt" > "$OUTPUT_DIR/Comb/records_tmp.csv"
   fi
 
-  # *************** Filtrando por scores mayores a 0.5 de DeepLocPro ***************
-  awk -F',' '$3 > 0.5 {print}' "$OUTPUT_DIR/Comb/records_tmp.csv" > "$OUTPUT_DIR/Comb/records_arreglado.csv"
+  # *************** Filtrando por scores mayores a 0.5 de DeepLocPro *************** # 0.5 IS NOT A DEEPLOCPRO VALID CUTOFF, WE SHOULD NOT FILTER
+  # awk -F',' '$3 > 0.5 {print}' "$OUTPUT_DIR/Comb/records_tmp.csv" > "$OUTPUT_DIR/Comb/records_arreglado.csv"
+  cp "$OUTPUT_DIR/Comb/records_tmp.csv" "$OUTPUT_DIR/Comb/records_arreglado.csv"
 
 	if [[ $? -eq 0 ]]; then
 		echo -ne "\t${greenColour}[+]${endColour} Deeploc results created.\n"
